@@ -16,6 +16,10 @@ body {
   background-color: #e7f6ff;
 }
 
+main {
+  padding-top: 48px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -159,6 +163,16 @@ a {
           line-height: 46px;
         }
       }
+
+      &__right {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+
+          display: block;
+        }
+      }
     }
   }
 
@@ -208,5 +222,153 @@ a {
         margin-right: calc(var(--size) / -2);
       }
     }
+  }
+}
+
+// Section
+
+.section {
+  margin-top: 48px;
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 16px 18px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input {
+    border: none;
+    outline: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #c4c4c4;
+  }
+}
+
+// Product
+
+.products {
+  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: max-content;
+
+  gap: 40px;
+}
+
+.product {
+  padding: 20px 30px 32px 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  border-radius: 16px;
+
+  position: relative;
+
+  button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    --size: 32px;
+
+    height: var(--size);
+    height: var(--size);
+
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+  }
+
+  h3 {
+    margin: 14px 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000;
+  }
+
+  &__action {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+
+    .gray {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      color: #bdbdbd;
+    }
+
+    .value {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-height: 120px;
+
+    object-fit: contain;
+
+    display: block;
   }
 }
