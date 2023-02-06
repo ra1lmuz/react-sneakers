@@ -5,9 +5,10 @@ import { RouterProvider } from 'react-router-dom';
 
 // Styles
 import "./styles/index.scss";
+import Loader from './components/Loader/Loader';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.Suspense fallback={<h1>Loading...</h1>}>
+  <React.Suspense fallback={<Loader />}>
     <RouterProvider router={router} />
   </React.Suspense>
 );
