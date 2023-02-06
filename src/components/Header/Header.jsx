@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { ModalContext } from "../../pages/Root";
 import { CartIcon, HeartIcon, OrderIcon } from "../Icons/Icons";
 import Logo from "./Logo/Logo";
 
 const CartButton = () => {
+
+  const { toggleModal } = useContext(ModalContext);
+  
   return (
-    <button>
+    <button onClick={ toggleModal }>
       <CartIcon /> <span>1205 руб.</span>
     </button>
   );
